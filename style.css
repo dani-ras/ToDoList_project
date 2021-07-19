@@ -20,8 +20,13 @@ li{
     background-color: white;
     border-radius: 5px;
     position: relative;
+    margin-bottom: 5px;
 }
 li span{
     position: absolute;
     right: 0;
+}
+
+#doneLi li{
+    text-decoration: line-through;
 }
