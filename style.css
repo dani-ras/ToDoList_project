@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    background-color: aliceblue;
+}
+#container{
+    border: 1px solid black;
+    width: auto;
+    background-color: rgba(255, 255, 0, 0.623);
+    margin: 20px auto 0;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li{
+    padding: 2px 2px 2px 6px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+li span{
+    position: absolute;
+    right: 0;
+}

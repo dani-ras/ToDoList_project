@@ -7,39 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
 
-    <style>
-        body{
-            display: flex;
-        }
-        #container{
-            border: 1px solid black;
-            width: auto;
-            margin: 20px auto 0;
-            padding: 0 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div id="container">
         <h1>ToDo List</h1>
-        <form action="">
+        <form action="" onsubmit="add_toDo()">
             <input type="text" placeholder="enter task">
             <input type="submit" value="Add">
         </form>
 
         <ul id="doLi">
-            <li>oneItemToDo <input type="checkbox" onclick="trans_doneLi()"> <button>x</button></li>
+            <li> <label for=""> oneItemToDo </label> 
+            <span>
+                <input type="checkbox" onclick="trans_doneLi()">
+                <button>x</button></li>
+            </span>
+                
         </ul>
 
         <hr>
 
         <ul id="doneLi">
-            <li>oneItemDone <input type="checkbox" checked onclick="trans_doLi()"></li>
+            <li>oneItemDone 
+                <span>
+                    <input type="checkbox" checked onclick="trans_doLi()"></li>
+                </span>
         </ul>
     </div>
 
+
+    <script src="script.js"></script>
 </body>
 
 </html>
