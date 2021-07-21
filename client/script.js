@@ -10,11 +10,12 @@ document.querySelector('form').onsubmit = event => {
         }), {}
         )
 
-    axios.post('http:localhost:3000/task', values)
-        .then(res => {
-            printList()
-        })
-
+    if ((values.task.trim())) {
+        axios.post('http:localhost:3000/task', values)
+            .then(res => {
+                printList()
+            })
+    }
     document.querySelector('form').reset()
 }
 
@@ -28,7 +29,6 @@ function printList() {
             const list = res.data
 
             if (list) {
-                console.log(list);
                 list.forEach(element => {
                     if (!element.checked) {
                         document.querySelector("#doLi").innerHTML +=
@@ -56,8 +56,6 @@ function printList() {
 // // // // // // // // // // // // // // // // // // // // // // // // // // 
 
 function trans_Li(id) {
-    console.log(id)
-    console.log({ "id": id })
     axios.put('http:localhost:3000/task', { "id": id })
         .then(res => {
             printList()
@@ -66,8 +64,6 @@ function trans_Li(id) {
 }
 
 function removeItem(id) {
-    console.log(id)
-
     axios.delete(`http:localhost:3000/task/${id}`)
         .then(res => {
             printList()

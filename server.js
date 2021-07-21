@@ -53,7 +53,7 @@ app.post('/task', function (req, res) { // CREATE new task and add to list
     // list.push(ntask)
     //// //// //// way3
     list.push(new Task(req.body.task))
-    fs.writeFileSync('list.json', JSON.stringify(list))
+    fs.writeFileSync('list.json', JSON.stringify(list,null,4))
 
     res.send(//'task added\n' + JSON.stringify(
         list
@@ -65,7 +65,7 @@ app.put('/task', function (req, res) { // UPDATE state of task in list
     list = require('./list.json')
     let cTask = list.find(t => t.id == req.body.id)
     cTask.checked = !cTask.checked
-    fs.writeFileSync('list.json', JSON.stringify(list))
+    fs.writeFileSync('list.json', JSON.stringify(list,null,4))
     res.send(
         list
     )
@@ -75,7 +75,7 @@ app.delete('/task/:id', function (req, res) { // REMOVE task from list
     list = require('./list.json')
     let cTask = list.find(t => t.id == req.params.id)
     list.splice(list.indexOf(cTask), 1)
-    fs.writeFileSync('list.json',JSON.stringify(list))
+    fs.writeFileSync('list.json',JSON.stringify(list,null,4))
     res.send(list)
 })
 
