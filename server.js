@@ -22,7 +22,7 @@ app.use(express.static('client'))
 let list //= require('./list.json')
 
 
-app.use(cors())
+//app.use(cors()) //access through browser // // // start through 'node .'. NOT npm start (nodemon).
 app.use(express.json())
 
 
