@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "task": "5",
+        "checked": true,
+        "id": "be3cee94-08bf-4df9-aa86-d24c3669c9e7"
+    },
+    {
+        "task": "1",
+        "checked": true,
+        "id": "e18bfcdb-707a-41f2-aa60-7442302a8247"
+    },
+    {
+        "task": "3",
+        "checked": false,
+        "id": "d7d97dd7-f1b1-4915-99f8-2c9c89664b2b"
+    },
+    {
+        "task": "88",
+        "checked": false,
+        "id": "c46781a7-afba-4178-a19e-71b1fafd6658"
+    }
+]
