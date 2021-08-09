@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "task": "task2",
+        "checked": true,
+        "id": "81357023-93ab-4f80-9f1f-4c703ba47d67"
+    },
+    {
+        "task": "task1",
+        "checked": false,
+        "id": "d0262a73-865c-4b91-8657-d7a6bd846654"
+    }
+]

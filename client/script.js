@@ -11,11 +11,8 @@ document.querySelector('form').onsubmit = event => {
         )
 
     if ((values.task.trim())) {
-        // axios.post('http://localhost:3800/task', values)
         addTask(values)
-        // .then(res => {
         printList()
-        // })
     }
     document.querySelector('form').reset()
 }
@@ -26,7 +23,6 @@ async function printList() {
 
 
     const res = await axios.get('http://localhost:3800/task')
-    // .then(res => {
     const list = res.data
 
     if (list) {
@@ -50,7 +46,6 @@ async function printList() {
             }
         });
     }
-    // })
 
 }
 
@@ -60,14 +55,10 @@ async function addTask(task) {
     const res = await axios.post('http://localhost:3800/task', task)
     return res
 }
-// axios.post('http://localhost:3800/task', values)
 
 async function trans_Li(id) {
     await axios.put('http://localhost:3800/task', { "id": id })
-    // .then(res => {
     printList()
-    // }
-    // )
 }
 
 function removeItem(id) {
